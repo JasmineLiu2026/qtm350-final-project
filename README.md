@@ -70,10 +70,12 @@ To replicate the analysis, follow these steps:
 ---
 
 ## **Technologies Used**  
+- **SQL**: Data Queries
 - **Python**: Data analysis and visualization  
 - **Jupyter Notebook**: Documentation and codebook generation  
-- **Pandas & NumPy**: Data preprocessing  
-- **Matplotlib & Seaborn**: Data visualization  
+- **Pandas & NumPy**: Data preprocessing and analysis
+- **Matplotlib & Seaborn**: Data visualization
+- **Quarto**: Report Compilation
 
 ---
 
