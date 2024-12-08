@@ -11,7 +11,7 @@ This repository contains the final project for QTM350, analyzing the relationshi
 ---
 
 ## **Research Questions**
-1. How do GDP growth rates differ between high-income and low-income countries?  
+1. How do GDP growth rates differ across all income groups?  
 2. Does a higher employment-to-population ratio always correlate with higher GDP per capita in low-income countries?
 
 ---
