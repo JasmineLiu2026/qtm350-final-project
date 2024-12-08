@@ -16,7 +16,7 @@ DROP TABLE IF EXISTS employment_to_population_ratio;
 SELECT * FROM employment_to_population_ratio;
 
 SELECT * FROM employment_to_population_ratio 
-WHERE "Country_Name" = 'United States';
+WHERE "Country Name" = 'United States';
 
 
 SELECT
@@ -38,13 +38,13 @@ SELECT
     gdp_growth."Country Code",
     gdp_growth."Year",
     gdp_growth."GDP Growth",
-    employment."Employment_to_Population_Ratio"
+    employment."Employment to Population Ratio"
 FROM 
     melted_gdp_growth AS gdp_growth
 LEFT JOIN 
     employment_to_population_ratio AS employment
 ON 
-    gdp_growth."Country Code" = employment."Country_Code"
+    gdp_growth."Country Code" = employment."Country Code"
     AND gdp_growth."Year" = employment."Year";
 
 
@@ -53,13 +53,13 @@ SELECT
     gdp_per_capita."Country Code",
     gdp_per_capita."Year",
     gdp_per_capita."GDP per Capita",
-    employment."Employment_to_Population_Ratio"
+    employment."Employment to Population Ratio"
 FROM 
     melted_gdp_per_capita AS gdp_per_capita
 LEFT JOIN 
     employment_to_population_ratio AS employment
 ON 
-    gdp_per_capita."Country Code" = employment."Country_Code"
+    gdp_per_capita."Country Code" = employment."Country Code"
     AND gdp_per_capita."Year" = employment."Year";
 
 
