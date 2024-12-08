@@ -1,4 +1,4 @@
-# QTM350 Final Project: Economic Indicators and Income Levels
+# QTM350 Final Project: Economic Indicators and Income Groups
 
 This repository contains the final project for QTM350, analyzing the relationships between GDP growth, GDP per capita, and employment-to-population ratios across different income groups.
 
