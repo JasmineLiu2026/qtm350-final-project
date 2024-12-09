@@ -1,0 +1,24 @@
+---
+title: "QTM 350 Final Project: A Study on Economic Behaviors of Varying Income Groups"
+author: "Harris Wang, William Xu, Jasmine Liu, Karl Zhou"
+date: "12/08/2024"
+output:
+  pdf: default  # For PDF format
+  html: default # For HTML format
+---
+
+## Introduction
+Research Questions: 
+
+    1. How do GDP growth rates differ between high-income and low-income countries? 
+
+    2. How does a employment-to-population ratio correlate with GDP per capita in different income groups? 
+
+## Data Description
+
+## Data Analysis
+
+## Results and Discussion
+
+## Conclusion
+
