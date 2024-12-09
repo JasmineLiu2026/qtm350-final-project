@@ -66,7 +66,7 @@ To replicate the analysis, follow these steps:
 3. **Review Outputs**:  
    - Visualizations and summary tables will be generated and saved in the `figures` folder.
 
-A detailed report of reproducing this project is also under report.html or report.qmd file.
+A detailed report of this project is under report.html or report.qmd file, which includes our major findings and insights. Please refer to this document for full reproducibility of this project.
 
 ---
 
