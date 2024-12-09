@@ -37,10 +37,9 @@ The study examines differences across four income groups:
 ### **2. Scripts**  
 - **`Data.sql`**:  
   Contains data queries and merging steps.
-- **`data_preprocessing.ipynb`**:  
-  Contains steps for data cleaning, merging, and exploratory analysis, including summary statistics.  
 - **`data_analysis.py`**:  
-  Builds on preprocessing with detailed analysis and visualizations addressing the research questions.
+  Contains steps for data cleaning, merging, and exploratory analysis, including summary statistics. Second half of this notebook builds on preprocessing with 
+  detailed analysis and visualizations addressing the research questions.
 
 ### **3. Outputs**  
 - **Figures and Tables**:  
@@ -66,6 +65,8 @@ To replicate the analysis, follow these steps:
 
 3. **Review Outputs**:  
    - Visualizations and summary tables will be generated and saved in the `figures` folder.
+
+A detailed report of reproducing this project is also under report.html or report.qmd file.
 
 ---
 
