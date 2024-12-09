@@ -1,24 +1,214 @@
 ---
-title: "QTM 350 Final Project: A Study on Economic Behaviors of Varying Income Groups"
-author: "Harris Wang, William Xu, Jasmine Liu, Karl Zhou"
-date: "12/08/2024"
-output:
-  pdf: default  # For PDF format
-  html: default # For HTML format
+title: "Economic Indicators and Income Groups"
+author: 
+  - name: "Jasmine Liu"
+  - name: "Harris Wang"
+  - name: "William Xu"
+  - name: "Karl Zhou"
+date: "12/09/24"
+format: html
 ---
 
-## Introduction
-Research Questions: 
+# Introduction
 
-    1. How do GDP growth rates differ between high-income and low-income countries? 
+Our final project aims to explore intricate relationships among key economic indicators across different income groups worldwide. Using data from the World Bank's World Development Indicators (WDI) database, our analysis focuses on three principal economic metrics: GDP per capita, annual GDP growth, and the employment-to-population ratio. By examining these indicators, we aim to uncover patterns and insights that can inform economic strategies tailored to the unique challenges and opportunities faced by countries at various stages of economic development.
 
-    2. How does a employment-to-population ratio correlate with GDP per capita in different income groups? 
+## Background
 
-## Data Description
+Economic indicators are vital tools for assessing the economic performance of countries. They not only reflect the economic health of a nation but also guide policy decisions and investment strategies. In this analysis, we aim to understand how these indicators vary across countries classified into different income groups: high-income, upper-middle-income, lower-middle-income, and low-income countries. These distinctions are crucial as they often dictate the economic priorities and policy interventions that are most effective for each group.
 
-## Data Analysis
+Economic development is a multifaceted process influenced by a myriad of factors ranging from geopolitical stability and regulatory frameworks to access to technology and the quality of human capital. The interplay between these factors and economic outcomes can be complex and is often mediated by the specific socio-economic context of each country. For instance, high-income countries typically exhibit stable economic growth and high levels of GDP per capita but may face challenges such as aging populations and environmental sustainability. Conversely, low-income countries often struggle with high levels of poverty and underemployment, despite sometimes experiencing rapid economic growth.
 
-## Results and Discussion
+The World Development Indicators (WDI) provide a comprehensive dataset that allows for an in-depth analysis of these issues. The WDI compiles statistically rigorous data that spans decades, offering a longitudinal perspective on economic development. This rich dataset enables researchers to trace the trajectories of economic indicators across time and evaluate the impact of economic policies and external shocks on different income groups. By leveraging this data, our project seeks to contribute to the ongoing discourse on global economic inequality and development, offering insights that could help shape more effective and equitable economic policies.
 
-## Conclusion
+Through this analysis, we not only explore the current state of global economic health but also aim to forecast future trends. Understanding these trends is essential for policymakers, economists, and international organizations striving to promote sustainable development and reduce economic disparities worldwide. By identifying the key drivers of economic success and the challenges that hinder progress, this project will provide valuable guidance for crafting strategies that enhance economic stability and prosperity for all income groups.
+
+## Research Questions
+
+Our final project revolves around two main questions:
+1. How do GDP growth rates differ across all income groups?
+2. Does a higher employment-to-population ratio always correlate with higher GDP per capita in low-income countries?
+
+
+## Objectives
+
+Our objectives of this project are to:
+- Analyze the trends and disparities in GDP growth, GDP per capita, and employment ratios across different income groups.
+- Explore the potential correlations between high employment rates and GDP per capita in the context of low-income countries.
+- Provide insights that could assist in the formulation of economic policies tailored to specific income groups.
+
+## Data and Methods
+
+Our analysis uses comprehensive datasets from the World Bank spaning from 1960 to 2023, providing a strong base for longitudinal analysis.
+
+
+# Data Description
+
+This project uses several datasets sourced from the World Bank's World Development Indicators database. The primary focus is on exploring how different economic indicators such as GDP growth, GDP per capita, and employment-to-population ratios vary across different income groups over the years. This section provides a detailed description of each dataset.
+
+## Datasets Overview
+
+### GDP Growth (Annual %)
+
+- **File Name**: `gdpg.csv`
+- **Description**: This dataset contains annual percentage growth rates of GDP at market prices based on constant local currency. Aggregates are based on constant 2010 U.S. dollars.
+- **Variables**:
+  - `Country_Name`: Name of the country.
+  - `Country_Code`: ISO country code.
+  - `Year`: Year of the data record, ranging from 1960 to 2023.
+  - `GDP_Growth`: Annual GDP growth rate (%).
+- **Preprocessing Steps**:
+  - Missing values were handled by excluding years where data was not reported.
+  - Outliers were checked against global economic events and corrected if data entry errors were suspected.
+
+### GDP Per Capita (Current US$)
+
+- **File Name**: `gdppc.csv`
+- **Description**: GDP per capita is the gross domestic product divided by midyear population. GDP is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products.
+- **Variables**:
+  - `Country_Name`
+  - `Country_Code`
+  - `Year`
+  - `GDP_Per_Capita`: GDP per capita in current U.S. dollars.
+- **Preprocessing Steps**:
+  - Data were adjusted for inflation and standardized to current U.S. dollars for comparability across years.
+
+### Employment to Population Ratio
+
+- **File Name**: `employment.csv`
+- **Description**: The employment to population ratio is the proportion of a country's population that is employed. Ages 15 and older are generally considered.
+- **Variables**:
+  - `Country_Name`
+  - `Country_Code`
+  - `Year`
+  - `Employment_Ratio`: Employment to population ratio (%).
+- **Preprocessing Steps**:
+  - Data gaps were filled using linear interpolation where feasible.
+
+### Metadata: Country Classifications
+
+- **File Name**: `metadata_countries.csv`
+- **Description**: This metadata file includes additional information about the countries, such as their regional classifications and income group categorizations.
+- **Variables**:
+  - `Country_Code`
+  - `Country_Name`
+  - `Region`
+  - `Income_Group`
+- **Preprocessing Steps**:
+  - This dataset was used to merge with other datasets on the `Country_Code` field to ensure consistent country names and to analyze data by region and income group.
+
+## Data Integrity and Reproducibility
+
+Each dataset underwent rigorous preprocessing to ensure data integrity and reliability for analysis. The preprocessing steps included cleaning, transforming, and merging data to facilitate comprehensive analysis. Scripts for these steps are detailed in the `data_preprocessing.ipynb` notebook, ensuring full reproducibility of our analysis.
+
+### Codebooks
+
+Detailed codebooks for each dataset have been prepared and are available in the documentation section. These codebooks provide a comprehensive overview of the variables, their meanings, and additional details that are crucial for understanding and replicating the analysis.
+
+
+# Data Analysis
+
+This section lists the techniques used to investigate the relationships among GDP growth, GDP per capita, and employment-to-population ratios across different income groups. 
+
+## Analytical Techniques
+
+### Descriptive Statistics
+
+- **Purpose**: To provide a baseline understanding of the data distributions, central tendencies, and variability.
+- **Methods Used**:
+  - Calculation of mean, median, and standard deviations for GDP growth, GDP per capita, and employment ratios.
+  - Generation of summary tables to compare these metrics across different income groups.
+
+### Time-Series Analysis
+
+- **Purpose**: To observe trends and patterns over time within each income group for the key economic indicators.
+- **Methods Used**:
+  - Plotting line graphs to visualize trends in GDP growth, GDP per capita, and employment ratios from 1960 to 2023.
+  - Employing moving averages to smooth out short-term fluctuations and highlight longer-term trends.
+
+### Correlation Analysis
+
+- **Purpose**: To examine the relationships between employment-to-population ratios and GDP per capita within each income group.
+- **Methods Used**:
+  - Calculation of Pearson correlation coefficients to measure the strength and direction of the relationship between the variables.
+  - Scatter plots to visually assess the correlation trends, supplemented with regression lines to estimate these relationships.
+
+## Tools and Technologies
+
+- **SQL**: Used for initial data querying and merging tasks to prepare datasets for analysis.
+- **Python**: Utilized extensively for data cleaning, processing, and analysis. Key libraries include Pandas for data manipulation, NumPy for numerical operations, Matplotlib and Seaborn for visualization.
+- **Jupyter Notebook**: Served as the platform for conducting and documenting the data analysis process.
+
+## Data Visualization
+
+- **GDP Growth Trends by Income Group**: Utilized line plots to depict the fluctuation of GDP growth rates across different income groups over the decades, as seen in the figure below.
+- **Employment to Population Ratio Trends**: Analyzed changes in employment ratios over time to determine how economic conditions have impacted employment across income groups.
+- **GDP Per Capita Trends**: Tracked the growth of GDP per capita to assess economic prosperity in different regions and income brackets.
+
+## Interpretation of Results
+
+- The analysis of GDP growth by income group revealed significant volatility in growth rates, with high-income countries generally experiencing more stable growth.
+- Employment to population ratios showed varying trends, where high-income groups maintained relatively stable employment levels, whereas low and lower-middle-income groups displayed more fluctuation.
+- The correlation analysis provided insights into how employment levels are associated with economic output per capita, highlighting that higher employment ratios do not always correlate with higher GDP per capita in low-income countries.
+
+
+# Results and Discussion
+
+This section discusses the results from our analysis. We discuss these findings in light of economic theories, historical context, and potential policy implications.
+
+## Key Findings
+
+### GDP Growth Variability by Income Group
+
+- **Observations**: The analysis reveals significant fluctuations in GDP growth across all income groups. Notably, high-income countries showed more stable growth trajectories compared to more volatile growth patterns in low and lower-middle-income groups.
+- **Figure Reference**: Refer to the "Average GDP Growth by Income Group (1960-2023)" plot.
+- **Discussion**: The stability in high-income countries can be attributed to their diversified economies and stronger institutional frameworks, which buffer against economic shocks. Conversely, the volatility observed in lower-income groups may result from their greater reliance on primary industries, which are more susceptible to external shocks and market fluctuations.
+
+### Trends in Employment to Population Ratio
+
+- **Observations**: There was a notable decline in the employment-to-population ratio in low-income groups until the early 2000s, followed by a gradual recovery. High-income countries maintained a relatively stable employment ratio.
+- **Figure Reference**: Refer to the "Trend of Employment to Population Ratio by Income Group (1990-2023)" plot.
+- **Discussion**: The trends in employment ratios highlight the impact of economic policies and global economic conditions on employment levels. The recovery in low-income countries could be linked to increased industrialization and investment in human capital.
+
+### Correlation Between GDP Per Capita and Employment Ratios
+
+- **Observations**: While higher GDP per capita generally correlates with higher employment ratios in high-income countries, this trend is less pronounced in low-income countries.
+- **Figure Reference**: Statistical analysis detailed in the "Income Group Correlation Table".
+- **Discussion**: This indicates that simply increasing GDP per capita does not automatically lead to higher employment rates in less developed economies. Factors such as labor market structure, social policies, and the nature of economic growth play significant roles.
+
+## Implications
+
+- **Economic Policy**: These findings suggest that policymakers in low-income countries should not solely focus on GDP growth but also on creating quality jobs that reflect economic advancements. Additionally, diversifying the economy can reduce vulnerability to economic shocks and stabilize growth.
+- **Future Research**: Further studies could explore the specific sectors within these economies that are most conducive to simultaneous growth in GDP and employment, particularly focusing on technology and service sectors.
+- **Global Economic Stability**: Understanding the dynamics between GDP and employment across different income groups is crucial for global economic stability, especially as it pertains to international trade, investment flows, and economic aid strategies.
+
+## Limitations
+
+- **Data Limitations**: Despite rigorous data preprocessing, discrepancies in data reporting and availability across countries and years may affect the robustness of the findings.
+- **Scope of Analysis**: While this analysis provides a broad overview, it does not account for intra-group disparities that may offer additional insights into economic conditions.
+
+
+# Conclusion
+
+Our analysis of economic indicators across different income groups has provided significant insights into the dynamics of GDP growth, GDP per capita, and employment-to-population ratios from 1960 to 2023. Here we list the major findings and propose future directions for research and policy development.
+
+## Major Insights
+
+- **GDP Growth Stability**: High-income countries exhibit more stable GDP growth compared to the more volatile growth seen in lower income groups. This stability is crucial for long-term economic planning and sustainability.
+- **Employment Trends**: The employment-to-population ratio shows varying trends across income groups, with high-income countries maintaining more stable employment rates. The fluctuations in low-income groups highlight the need for policies that enhance job security and employment opportunities.
+- **Correlation Analysis**: The relationship between GDP per capita and employment ratios varies across income groups. In high-income countries, a strong positive correlation exists, whereas in low-income countries, the correlation is weaker, suggesting that economic growth does not automatically translate into employment growth.
+
+## Implications for Policy
+
+The findings underscore the importance of diversified economic strategies that go beyond focusing solely on GDP growth. For low-income countries, policies aimed at improving education, infrastructure, and technological adoption could spur economic development and enhance employment rates. Additionally, the results advocate for the stability and resilience of economic systems to better withstand global economic shocks.
+
+## Future Research
+
+- **Sector-Specific Analysis**: Future studies could analyze the impact of different economic sectors on GDP and employment to identify which sectors contribute most to sustainable growth.
+- **Policy Impact Studies**: Research assessing the effectiveness of specific economic policies on improving GDP and employment figures would provide valuable feedback for policymakers.
+- **Longitudinal Studies**: Further longitudinal analyses could help understand the long-term effects of economic changes within each income group, providing deeper insights into the cyclic nature of economic growth and employment.
+
+
+
+
 
