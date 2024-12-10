@@ -142,8 +142,16 @@ This section lists the techniques used to investigate the relationships among GD
 ## Data Visualization
 
 - **GDP Growth Trends by Income Group**: Utilized line plots to depict the fluctuation of GDP growth rates across different income groups over the decades, as seen in the figure below.
+
+![GDP Growth By Income Group](figures/Average GDP Growth by Income Group.png){#fig-id}
+
 - **Employment to Population Ratio Trends**: Analyzed changes in employment ratios over time to determine how economic conditions have impacted employment across income groups.
+
+![Employment to Population Ratio](figures/Trend of Employment to Population Ratio by Income Group.png){#fig-id}
+
 - **GDP Per Capita Trends**: Tracked the growth of GDP per capita to assess economic prosperity in different regions and income brackets.
+
+![GDP Per Capita](figures/Trend of GDP per Capita by Income Group.png){#fig-id}
 
 ## Interpretation of Results
 
