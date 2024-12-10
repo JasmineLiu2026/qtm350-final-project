@@ -1,10 +1,10 @@
 ---
 title: "Economic Indicators and Income Groups"
 author: 
-  - name: "Jasmine Liu"
-  - name: "Harris Wang"
-  - name: "William Xu"
-  - name: "Karl Zhou"
+  - name: "Jasmine Liu (2550117)"
+  - name: "Harris Wang (2551003)"
+  - name: "William Xu (2538911)"
+  - name: "Karl Zhou (2593454)"
 date: "12/09/24"
 format: html
 ---
