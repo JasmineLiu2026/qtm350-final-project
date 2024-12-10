@@ -7,6 +7,7 @@ author:
   - name: "Karl Zhou (2593454)"
 date: "12/09/24"
 format: html
+embed-resources: true
 ---
 
 # Introduction
